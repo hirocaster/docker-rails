@@ -14,8 +14,6 @@ RUN ln -sf /usr/local/bin/yarn /usr/bin/yarn
 
 RUN apt-get purge -y nodejs npm
 
-RUN ./bin/setup
-
 ENV ENTRYKIT_VERSION 0.4.0
 RUN wget https://github.com/progrium/entrykit/releases/download/v${ENTRYKIT_VERSION}/entrykit_${ENTRYKIT_VERSION}_Linux_x86_64.tgz \
   && tar -xvzf entrykit_${ENTRYKIT_VERSION}_Linux_x86_64.tgz \
